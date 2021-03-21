@@ -4,8 +4,9 @@ export default function PostComments({ comments }) {
       <Comment key={index} comment={comment} />
     ));
   }
+  return null;
 }
 
 function Comment({ comment }) {
-  return <div>comment</div>;
+  return <div>{comment.comment}</div>;
 }

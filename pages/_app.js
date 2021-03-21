@@ -1,7 +1,13 @@
 import "../styles/globals.css";
+import Layout from "../components/Layout";
+import { Fragment } from "react";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <Layout className="container mx-auto xs:px-2">
+      <Fragment>
+        <Component {...pageProps} />
+      </Fragment>
+    </Layout>
+  );
 }
-
-export default MyApp;

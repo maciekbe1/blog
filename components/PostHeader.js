@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import dateUtil from "../lib/dateUtil";
 import { urlFor } from "../lib/api";
@@ -16,7 +15,14 @@ export default function PostHeader({
       <h1 className="text-5xl xs:text-3xl">{title}</h1>
       <div className="flex items-center py-4">
         <Image
-          src={urlFor(authorAvatar).height(50).url() || ""}
+          src={
+            urlFor(authorAvatar)
+              .height(50)
+              .width(50)
+              .crop("top")
+              .fit("crop")
+              .url() || ""
+          }
           width={50}
           height={50}
           className="rounded-full"

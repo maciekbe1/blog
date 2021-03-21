@@ -26,7 +26,14 @@ export default function PostCard({ post }) {
               <div>
                 <div className="flex items-center">
                   <Image
-                    src={urlFor(post.author.image).height(40).url() || ""}
+                    src={
+                      urlFor(post.author.image)
+                        .height(40)
+                        .crop("top")
+                        .fit("crop")
+                        .width(40)
+                        .url() || ""
+                    }
                     width={40}
                     height={40}
                     className="rounded-full"
