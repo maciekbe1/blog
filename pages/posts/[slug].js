@@ -1,8 +1,8 @@
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import PostHeader from "../../components/PostHeader";
-import PostContent from "../../components/PostContent";
-import { PostForm } from "../../components/PostForm";
-import PostComments from "../../components/PostComments";
+import { getPostBySlug, getAllPosts } from "lib/api";
+import PostHeader from "@/components/PostHeader";
+import PostContent from "@/components/PostContent";
+import { PostForm } from "@/components/PostForm";
+import PostComments from "@/components/PostComments";
 
 export default function PostDetail({ post }) {
   return (

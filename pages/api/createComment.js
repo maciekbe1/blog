@@ -25,7 +25,7 @@ export default async function createComment(req, res) {
       .catch((error) => {
         res.json(error);
         res.status(405).end();
-        return resolve(); //in case something goes wrong in the catch block (as vijay) commented
+        return resolve();
       });
   });
 }

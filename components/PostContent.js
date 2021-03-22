@@ -1,6 +1,6 @@
 import BlockContent from "@sanity/block-content-to-react";
-import CodeHighlight from "./CodeHighlight";
-import { urlFor } from "../lib/api";
+import CodeHighlight from "@/components/CodeHighlight";
+import { urlFor } from "lib/api";
 import Link from "next/link";
 
 const serializers = {

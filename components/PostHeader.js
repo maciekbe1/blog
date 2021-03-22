@@ -1,6 +1,6 @@
 import Image from "next/image";
-import dateUtil from "../lib/dateUtil";
-import { urlFor } from "../lib/api";
+import dateUtil from "lib/dateUtil";
+import { urlFor } from "lib/api";
 
 export default function PostHeader({
   date,

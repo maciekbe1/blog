@@ -1,7 +1,7 @@
 import Link from "next/link";
-import dateUtil from "../lib/dateUtil";
+import dateUtil from "lib/dateUtil";
 import Image from "next/image";
-import { urlFor } from "../lib/api";
+import { urlFor } from "lib/api";
 
 export default function PostCard({ post }) {
   return (

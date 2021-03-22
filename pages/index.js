@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Posts from "../components/Posts";
-import { getAllPosts } from "../lib/api";
+import Posts from "@/components/Posts";
+import { getAllPosts } from "lib/api";
+import { useGetPosts } from "actions";
 
-export default function Home({ posts }) {
+export default function Home({ posts: initialData }) {
+  const { data: posts, error } = useGetPosts(initialData);
   return (
     <div>
       <Head>
@@ -14,7 +16,7 @@ export default function Home({ posts }) {
   );
 }
 export async function getStaticProps() {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts({ offset: 0 });
   return {
     props: {
       posts,

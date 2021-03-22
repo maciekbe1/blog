@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-import Layout from "../components/Layout";
+import "styles/globals.css";
+import Layout from "@/components/Layout";
 import { Fragment } from "react";
 
 export default function MyApp({ Component, pageProps }) {
