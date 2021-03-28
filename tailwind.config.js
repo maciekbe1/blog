@@ -17,6 +17,7 @@ module.exports = {
       margin: ["first", "last", "odd"],
       cursor: ["hover", "focus"],
       transitionProperty: ["hover", "focus"],
+      borderRadius: ["hover", "focus"],
     },
   },
   plugins: [],

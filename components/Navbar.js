@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="inset-y-0 left-0 flex items-center justify-between w-full mx-auto xs:px-2">
               {/* <!-- Mobile menu button--> */}
               <button
-                className="inline-flex items-center justify-center p-2 text-gray-400 sm:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="inline-flex items-center justify-center text-gray-400 sm:hidden focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-expanded="false"
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
@@ -71,7 +71,7 @@ export default function Navbar() {
 
               <div className="relative text-gray-600">
                 <input
-                  className="h-10 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded-lg focus:outline-none"
+                  className="h-10 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded focus:outline-none"
                   type="search"
                   name="search"
                   placeholder="Search"

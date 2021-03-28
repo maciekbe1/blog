@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="flex flex-wrap ">
           <div className="w-full px-4 mx-auto text-center md:w-4/12">
             <div className="py-1 text-sm font-semibold text-gray-600">
-              PROGRAMYSTIC © {new Date().getFullYear()}
+              Blog © {new Date().getFullYear()}
             </div>
           </div>
         </div>

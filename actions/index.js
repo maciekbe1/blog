@@ -3,13 +3,15 @@ import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export const getPosts = (url) => {
+  console.log(url);
   return fetcher(url);
 };
 
-export const useGetPosts = ({ offset }, initialData) => {
+//Not used method
+export const useGetPosts = ({ offset, sort }, initialData) => {
   return useSWR(
     `
-    /api/posts?offset=${offset || 0}`,
+    /api/posts?offset=${offset || 0}&date=${sort.asc ? "asc" : "desc"}`,
     fetcher,
     { initialData }
   );

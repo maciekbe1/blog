@@ -5,7 +5,7 @@ import { urlFor } from "lib/api";
 
 export default function PostCard({ post }) {
   return (
-    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="relative overflow-hidden bg-white rounded shadow-lg">
       <div
         style={{
           backgroundImage: `url('${urlFor(post.mainImage.image)
