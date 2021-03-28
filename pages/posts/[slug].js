@@ -1,6 +1,6 @@
 import { getPostBySlug, getAllPosts } from "lib/api";
 import PostHeader from "@/components/PostHeader";
-import PostContent from "@/components/PostContent";
+import PostBody from "@/components/PostBody";
 import { PostForm } from "@/components/PostForm";
 import PostComments from "@/components/PostComments";
 
@@ -15,7 +15,7 @@ export default function PostDetail({ post }) {
         authorAvatar={post.author.image}
         authorName={post.author.name}
       />
-      <PostContent body={post.body} />
+      <PostBody body={post.body} />
       <PostForm _id={post._id} />
       <PostComments comments={post?.comments} />
     </>

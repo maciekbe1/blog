@@ -1,4 +1,4 @@
-import client from "../../lib/client";
+import client from "lib/client";
 
 export default async function createComment(req, res) {
   const { name, comment, email, _id } = JSON.parse(req.body);
