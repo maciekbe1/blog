@@ -1,15 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
+import ThemeButton from "@/components/ThemeButton";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <div className="pb-24">
-      <nav className="fixed z-10 w-full bg-white border-b-2 border-navy">
+      <nav className="fixed z-10 w-full bg-white border-b-2 border-navy dark:bg-dark-800">
         <div className="container mx-auto">
           <div className="flex items-center h-24 ">
-            <div className="inset-y-0 left-0 flex items-center justify-between w-full mx-auto xs:px-2">
+            <div className="relative left-0 flex items-center justify-center w-full mx-auto xs:px-2">
               {/* <!-- Mobile menu button--> */}
               <button
                 className="inline-flex items-center justify-center text-gray-400 sm:hidden focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -23,7 +24,9 @@ export default function Navbar() {
                       Menu open: "hidden", Menu closed: "block"
                     --> */}
                 <svg
-                  className={`${navbarOpen ? "hidden" : "block"} h-6 w-6"`}
+                  className={`${
+                    navbarOpen ? "hidden" : "block"
+                  } h-6 w-6 absolute left-4`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -44,7 +47,9 @@ export default function Navbar() {
                     Menu open: "block", Menu closed: "hidden"
                   --> */}
                 <svg
-                  className={`${navbarOpen ? "block" : "hidden"} h-6 w-6`}
+                  className={`${
+                    navbarOpen ? "block" : "hidden"
+                  } h-6 w-6  absolute left-4`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -60,10 +65,10 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              <div className="hidden w-auto sm:block">
+              <div className="absolute left-0 hidden w-auto sm:block">
                 <Link href="/">
                   <div className="flex items-center font-bold cursor-pointer">
-                    <div className="ml-2">
+                    <div className="">
                       Front<span className="text-indigo-700">end</span>
                     </div>
                   </div>
@@ -71,8 +76,12 @@ export default function Navbar() {
               </div>
               <SearchBar />
 
-              <div className="hidden sm:block">
-                <Link href="/about">O mnie</Link>
+              <div className="absolute right-0 flex items-center xs:right-4">
+                <div className="mr-6 xs:hidden">
+                  <Link href="/about">O mnie</Link>
+                </div>
+
+                <ThemeButton />
               </div>
             </div>
           </div>

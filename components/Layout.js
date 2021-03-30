@@ -12,7 +12,7 @@ export default function Layout({ children, className }) {
           rel="stylesheet"
         />
       </Head>
-      <div className="bg-gray-100 font-nunito">
+      <div className="bg-gray-100 font-nunito dark:bg-dark-900">
         <Navbar />
         <div className={className}>{children}</div>
         <Footer />
