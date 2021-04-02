@@ -26,6 +26,7 @@ module.exports = {
       cursor: ["hover", "focus"],
       transitionProperty: ["hover", "focus"],
       borderRadius: ["hover", "focus"],
+      backgroundColor: ["even", "odd"],
     },
   },
   plugins: [],

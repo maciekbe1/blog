@@ -1,14 +1,21 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export function PostForm({ _id }) {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, watch, errors, reset } = useForm();
   const onSubmit = (data) => {
     fetch("/api/createComment", {
       method: "POST",
       body: JSON.stringify({ ...data, _id }),
+    }).then(() => {
+      setState(true);
+      setTimeout(() => {
+        setState(false);
+        reset();
+      }, 10000);
     });
   };
-
+  const [state, setState] = useState(false);
   //console.log(watch("example")); // watch input value by passing the name of it
 
   return (
@@ -52,10 +59,17 @@ export function PostForm({ _id }) {
             )}
           </div>
         </div>
-        <input
-          type="submit"
-          className="px-6 py-2 text-white bg-indigo-600 rounded"
-        />
+        <div className="flex items-center">
+          <input
+            type="submit"
+            className="px-6 py-2 text-white bg-indigo-600 rounded"
+          />
+          {state && (
+            <p className="pl-4 text-green-600">
+              Dziękuję za komentarz. Po weryfikacji pojawi się w sekcji{" "}
+            </p>
+          )}
+        </div>
       </form>
     </div>
   );
