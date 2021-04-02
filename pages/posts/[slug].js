@@ -16,6 +16,12 @@ export default function PostDetail({ post }) {
         authorName={post.author.name}
       />
       <PostBody body={post.body} />
+
+      <div className="my-6">
+        {post?.comments && <p>Liczba komentarzy: {post.comments.length}</p>}
+        <hr />
+      </div>
+
       <PostForm _id={post._id} />
       <PostComments comments={post?.comments} />
     </>

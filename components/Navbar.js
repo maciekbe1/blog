@@ -69,7 +69,7 @@ export default function Navbar() {
                 <Link href="/">
                   <div className="flex items-center font-bold cursor-pointer">
                     <div className="">
-                      Front<span className="text-indigo-700">end</span>
+                      Code<span className="text-indigo-600">mon</span>
                     </div>
                   </div>
                 </Link>
