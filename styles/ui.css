@@ -1,0 +1,46 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.base {
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.8;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4.5px);
+}
+
+.colorized {
+  background: linear-gradient(
+    90deg,
+    #ffff00 3%,
+    #ffa500 12%,
+    #f14444 23%,
+    #d53567 27%,
+    #9a109a 47%,
+    #9a109a 53%,
+    #d53567 72%,
+    #f14444 77%,
+    #ffa500 88%,
+    #ffff00 97%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.001);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.left-to-center {
+  background-position: left center;
+}
+.right-to-center {
+  background-position: right center;
+}

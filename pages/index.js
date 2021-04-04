@@ -5,6 +5,7 @@ import Posts from "@/components/Posts";
 import { useGetPostsPages } from "actions/pagination";
 import { getPaginatedPosts } from "lib/api";
 import SortMenu from "@/components/SortMenu";
+import Banner from "@/components/Banner";
 
 export default function Home({ posts }) {
   const [sort, setSort] = useState({ asc: 0 });
@@ -15,6 +16,7 @@ export default function Home({ posts }) {
         <title>Posts</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Banner />
       <SortMenu
         sort={sort}
         onChange={(option, value) => setSort({ [option]: value })}

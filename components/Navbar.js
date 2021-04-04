@@ -7,10 +7,10 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <div className="pb-24">
-      <nav className="fixed z-10 w-full bg-white border-b-2 border-navy dark:bg-dark-800">
-        <div className="container mx-auto">
-          <div className="flex items-center h-24 ">
-            <div className="relative left-0 flex items-center justify-center w-full mx-auto xs:px-2">
+      <nav className="fixed z-40 w-full bg-white border-b-2 border-navy dark:bg-dark-800">
+        <div className="container px-8 mx-auto xs:px-3">
+          <div className="flex items-center h-24">
+            <div className="relative left-0 flex items-center justify-center w-full mx-auto">
               {/* <!-- Mobile menu button--> */}
               <button
                 className="inline-flex items-center justify-center text-gray-400 sm:hidden focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -69,7 +69,7 @@ export default function Navbar() {
                 <Link href="/">
                   <div className="flex items-center font-bold cursor-pointer">
                     <div className="">
-                      Code<span className="text-indigo-600">mon</span>
+                      Front<span className="text-indigo-600">review</span>
                     </div>
                   </div>
                 </Link>

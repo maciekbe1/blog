@@ -12,7 +12,7 @@ export const useGetPostsPages = ({ sort }) => {
         return null;
       }
 
-      return `/api/posts?offset=${index * 3}&date=${sort.asc ? "asc" : "desc"}`;
+      return `/api/posts?offset=${index * 4}&date=${sort.asc ? "asc" : "desc"}`;
     },
     getPosts,
     { persistSize: true }

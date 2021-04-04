@@ -1,8 +1,8 @@
 const SortMenu = ({ onChange, sort }) => {
   return (
     <div
-      className="inline-block mt-2"
       onClick={() => onChange("asc", +!sort.asc)}
+      className="relative inline-block my-2 cursor-pointer"
     >
       {sort.asc ? (
         <svg

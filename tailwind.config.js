@@ -15,7 +15,9 @@ module.exports = {
         xs: { max: "639px" },
       },
       fontFamily: {
-        nunito: "Nunito",
+        bebas: "Bebas Neue",
+        body: "Nunito",
+        satisfy: "Satisfy",
       },
     },
   },

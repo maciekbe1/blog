@@ -5,14 +5,8 @@ import Footer from "@/components/Footer";
 export default function Layout({ children, className }) {
   return (
     <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <div className="bg-gray-100 font-nunito dark:bg-dark-900">
+      <Head></Head>
+      <div className="overflow-hidden bg-gray-100 font-custom dark:bg-dark-900">
         <Navbar />
         <div className={className}>{children}</div>
         <Footer />
