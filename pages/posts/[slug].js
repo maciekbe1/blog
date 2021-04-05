@@ -3,10 +3,12 @@ import PostHeader from "@/components/PostHeader";
 import PostBody from "@/components/PostBody";
 import { PostForm } from "@/components/PostForm";
 import PostComments from "@/components/PostComments";
+import PreviewAlert from "@/components/PreviewAlert";
 
-export default function PostDetail({ post }) {
+export default function PostDetail({ post, preview }) {
   return (
     <>
+      {preview && <PreviewAlert />}
       <PostHeader
         date={post.publishedAt}
         image={post.mainImage.image}
@@ -27,9 +29,9 @@ export default function PostDetail({ post }) {
     </>
   );
 }
-export async function getStaticProps({ params }) {
-  const post = await getPostBySlug(params.slug);
-  return { props: { post } };
+export async function getStaticProps({ params, preview = false, previewData }) {
+  const post = await getPostBySlug(params.slug, preview);
+  return { props: { post, preview } };
 }
 
 export async function getStaticPaths() {

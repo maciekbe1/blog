@@ -16,7 +16,7 @@ export default function SearchBar() {
     <div className="relative text-gray-600">
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="h-10 px-5 pr-16 text-sm bg-white border-2 border-gray-300 rounded focus:outline-none"
+          className="h-10 px-5 text-sm bg-white border-2 border-gray-300 rounded lg:w-80 xl:w-96 focus:outline-none"
           type="search"
           name="search"
           placeholder="Search"

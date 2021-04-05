@@ -6,8 +6,9 @@ import { useGetPostsPages } from "actions/pagination";
 import { getPaginatedPosts } from "lib/api";
 import SortMenu from "@/components/SortMenu";
 import Banner from "@/components/Banner";
+import PreviewAlert from "@/components/PreviewAlert";
 
-export default function Home({ posts }) {
+export default function Home({ posts, preview }) {
   const [sort, setSort] = useState({ asc: 0 });
   const { data, size, setSize, hitEnd } = useGetPostsPages({ sort });
   return (
@@ -16,6 +17,7 @@ export default function Home({ posts }) {
         <title>Posts</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {preview && <PreviewAlert />}
       <Banner />
       <SortMenu
         sort={sort}
@@ -38,11 +40,12 @@ export default function Home({ posts }) {
     </div>
   );
 }
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
   const posts = await getPaginatedPosts({ offset: 0, date: "desc" });
   return {
     props: {
       posts,
+      preview,
     },
   };
 }
