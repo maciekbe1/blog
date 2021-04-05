@@ -11,11 +11,29 @@ import PreviewAlert from "@/components/PreviewAlert";
 export default function Home({ posts, preview }) {
   const [sort, setSort] = useState({ asc: 0 });
   const { data, size, setSize, hitEnd } = useGetPostsPages({ sort });
+
   return (
     <div>
       <Head>
-        <title>Posts</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Miejsce informacji o Frontendzie</title>
+        <meta description="Blog powstał w celu dzielenia się wiedzą ze świata programowania Frontend." />
+        <meta
+          property="og:title"
+          content="Frontreview - miejsce informacji o Frontendzie"
+          key="title"
+          key="ogtitle"
+        />
+        <meta
+          property="og:description"
+          content="Blog powstał w celu dzielenia się wiedzą ze świata programowania Frontend."
+          key="ogdesc"
+        />
+        <meta
+          property="og:image"
+          content="https://frontreview.pl/assets/frontreview.png"
+          key="ogimage"
+        />
+        <meta property="og:url" content="https://frontreview.pl" key="ogurl" />
       </Head>
       {preview && <PreviewAlert />}
       <Banner />
