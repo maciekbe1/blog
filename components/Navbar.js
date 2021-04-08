@@ -78,7 +78,7 @@ export default function Navbar() {
 
               <div className="absolute right-0 flex items-center xs:right-4">
                 <div className="mr-6 xs:hidden">
-                  <Link href="/about">O mnie</Link>
+                  <Link href="/o-mnie">O mnie</Link>
                 </div>
 
                 <ThemeButton />
@@ -104,7 +104,7 @@ export default function Navbar() {
                 className="z-10 px-3 py-2 text-sm font-medium"
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
-                <Link href="/about">O mnie</Link>
+                <Link href="/o-mnie">O mnie</Link>
               </li>
             </ul>
           </div>

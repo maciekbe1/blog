@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import dateUtil from "lib/dateUtil";
 import Image from "next/image";
 import { urlFor } from "lib/api";
+import debounce from "lib/debounce";
 
 import { useRouter } from "next/router";
 export default function SearchBar() {
@@ -10,7 +11,7 @@ export default function SearchBar() {
   const [value, setValue] = useState("");
   const inputRef = useRef();
   const router = useRouter();
-  const onChange = async (data) => {
+  const onChange = debounce(async (data) => {
     if (data) {
       const res = await fetch("/api/getPostByName", {
         method: "POST",
@@ -20,7 +21,7 @@ export default function SearchBar() {
       setPosts(result);
     }
     setValue(data);
-  };
+  }, 500);
 
   return (
     <div className="relative text-gray-600">

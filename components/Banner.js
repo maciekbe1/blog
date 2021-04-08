@@ -12,15 +12,15 @@ export default function HomepageHeader() {
       <div className="container flex justify-center w-full mx-auto">
         <div className="z-10 flex flex-col justify-center w-full font-semibold text-white lg:w-1/2 font-bebas">
           <p className="text-2xl">Witaj na Frontreview!</p>
-          <h1 className="text-9xl xs:text-8xl">Najlepsze miejsce</h1>
+          <h1 className="lg:text-9xl text-8xl">Najlepsze miejsce</h1>
           <p className="text-5xl">Zgłębiania wiedzy o Frontendzie</p>
         </div>
 
-        <div className="relative z-10 hidden w-1/2 lg:flex">
+        <div className="relative z-10 justify-center hidden w-1/2 lg:flex">
           <div className="absolute flex items-center justify-center w-16 h-16 rounded-full left-40 glass -top-2">
             <Emoji symbol="💻" label="laptop" />
           </div>
-          <div className="absolute flex items-center justify-center w-16 h-16 rounded-full right-32 glass top-10">
+          <div className="absolute flex items-center justify-center w-16 h-16 rounded-full right-20 glass top-10">
             <Emoji symbol="🔥" label="fire" />
           </div>
           <div className="absolute flex items-center justify-center w-16 h-16 rounded-full left-16 glass bottom-10">
