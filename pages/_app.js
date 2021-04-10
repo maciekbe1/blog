@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-      <Layout className="container px-8 mx-auto">
+      <Layout>
         <Fragment>
           <Component {...pageProps} />
         </Fragment>

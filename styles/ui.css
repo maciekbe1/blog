@@ -44,3 +44,50 @@
 .right-to-center {
   background-position: right center;
 }
+
+.about-me__gradient {
+  /* background-image: linear-gradient(
+    to left top,
+    #f4cdcd,
+    #f3b1c8,
+    #df9bd6,
+    #ab8fed,
+    #0b8eff
+  ); */
+  background-image: linear-gradient(
+    to right top,
+    #fdc3e4,
+    #eebce7,
+    #dbb6e9,
+    #c6b1ea,
+    #adadea,
+    #9ab3f2,
+    #83b9f7,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-weight: 400;
+  src: url(/fonts/Helvetica.ttf) format("ttf");
+}
+
+.line {
+  @apply relative inline-block;
+}
+.line:after {
+  content: "";
+  @apply absolute left-0 h-1 bg-red-600 -bottom-3 w-28;
+}
+
+@screen lg {
+  .about-me__title {
+    font-size: 180px;
+    line-height: 140px;
+  }
+}

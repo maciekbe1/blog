@@ -13,7 +13,7 @@ export default function Home({ posts, preview }) {
   const { data, size, setSize, hitEnd } = useGetPostsPages({ sort });
 
   return (
-    <div>
+    <div className="container px-8 mx-auto">
       <Head>
         <title>Miejsce informacji o Frontendzie</title>
         <meta description="Blog powstał w celu dzielenia się wiedzą ze świata programowania Frontend." />
@@ -46,7 +46,7 @@ export default function Home({ posts, preview }) {
         <button
           onClick={() => setSize(size + 1)}
           disabled={hitEnd}
-          className={`px-4 pt-2 pb-1 text-lg rounded ${
+          className={`px-4 pb-1 text-lg rounded ${
             hitEnd
               ? "text-gray-200 bg-gray-500 border-4 border-gray-500"
               : "text-white box-border bg-indigo-600 border-4 border-indigo-600 hover:text-gray-600 hover:bg-white text-lg"

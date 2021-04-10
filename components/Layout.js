@@ -20,7 +20,7 @@ export default function Layout({ children, className }) {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pl_PL" />
       </Head>
-      <div className="overflow-hidden bg-gray-100 font-custom dark:bg-dark-900">
+      <div className="overflow-hidden font-custom dark:bg-dark-900">
         <Navbar />
         <div className={className}>{children}</div>
         <Footer />

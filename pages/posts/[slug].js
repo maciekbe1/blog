@@ -7,7 +7,7 @@ import PreviewAlert from "@/components/PreviewAlert";
 
 export default function PostDetail({ post, preview }) {
   return (
-    <>
+    <div className="container px-8 mx-auto">
       {preview && <PreviewAlert />}
       <PostHeader
         date={post.publishedAt}
@@ -28,7 +28,7 @@ export default function PostDetail({ post, preview }) {
 
       <PostForm _id={post._id} />
       <PostComments comments={post?.comments} />
-    </>
+    </div>
   );
 }
 export async function getStaticProps({ params, preview = false, previewData }) {
