@@ -4,31 +4,58 @@ import PostBody from "@/components/PostBody";
 import { PostForm } from "@/components/PostForm";
 import PostComments from "@/components/PostComments";
 import PreviewAlert from "@/components/PreviewAlert";
+import Head from "next/head";
 
 export default function PostDetail({ post, preview }) {
   return (
-    <div className="container px-8 mx-auto">
-      {preview && <PreviewAlert />}
-      <PostHeader
-        date={post.publishedAt}
-        image={post.mainImage.image}
-        title={post.title}
-        subtitle={post.subtitle}
-        authorAvatar={post.author.image}
-        authorName={post.author.name}
-        categories={post.categories}
-        slug={post.slug}
-      />
-      <PostBody body={post.body} />
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta description={post.subtitle} />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="keyworld" content={post.categories.slice(", ")} />
+        <meta
+          property="og:title"
+          content={post.title}
+          key="title"
+          key="ogtitle"
+        />
+        <meta property="og:description" content={post.subtitle} key="ogdesc" />
+        <meta
+          property="og:image"
+          content={post.mainImage.image}
+          key="ogimage"
+        />
+        <meta
+          property="og:url"
+          content={"https://frontreview.pl/posts/" + post.slug}
+          key="ogurl"
+        />
+      </Head>
+      <div className="container mx-auto lg:px-48">
+        {preview && <PreviewAlert />}
+        <PostHeader
+          date={post.publishedAt}
+          image={post.mainImage.image}
+          title={post.title}
+          subtitle={post.subtitle}
+          authorAvatar={post.author.image}
+          authorName={post.author.name}
+          categories={post.categories}
+          slug={post.slug}
+        />
+        <PostBody body={post.body} />
 
-      <div className="my-6">
-        {post?.comments && <p>Liczba komentarzy: {post.comments.length}</p>}
-        <hr />
+        <div className="my-6">
+          {post?.comments && <p>Liczba komentarzy: {post.comments.length}</p>}
+          <hr />
+        </div>
+
+        <PostForm _id={post._id} />
+        <PostComments comments={post?.comments} />
       </div>
-
-      <PostForm _id={post._id} />
-      <PostComments comments={post?.comments} />
-    </div>
+    </>
   );
 }
 export async function getStaticProps({ params, preview = false, previewData }) {

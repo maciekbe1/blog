@@ -5,11 +5,34 @@ import Link from "next/link";
 
 const serializers = {
   types: {
+    block: (props) => {
+      const tag = props.node.style || "normal";
+      if (tag == "h2") {
+        return (
+          <h2 className="my-4 text-4xl font-medium xs:text-2xl title-font">
+            {props.children}
+          </h2>
+        );
+      }
+      if (tag == "h3") {
+        return (
+          <h3 className="my-4 text-2xl font-medium xs:text-xl title-font">
+            {props.children}
+          </h3>
+        );
+      }
+      if (props.children == "") {
+        return <br />;
+      }
+      return <p className="my-4 text-lg xs:text-base">{props.children}</p>;
+    },
     code: ({ node: { language, code, filename } }) => (
-      <CodeHighlight language={language}>
-        {code}
+      <div className="my-2 xs:px-0">
+        <CodeHighlight language={language}>
+          <div className="px-4">{code}</div>
+        </CodeHighlight>
         <div className="text-sm italic code-filename">{filename}</div>
-      </CodeHighlight>
+      </div>
     ),
     image: ({ node: { asset, alt, position = "center" } }) => {
       const margin = () => (position === "left" ? "mr-4" : "ml-4");

@@ -1,4 +1,5 @@
 import AboutMeBanner from "@/components/AboutMeBanner";
+import Head from "next/head";
 
 export default function AboutMe() {
   return (
@@ -14,15 +15,9 @@ export default function AboutMe() {
               O mnie
             </h2>
             <p className="text-2xl font-light xs:text-lg">
-              Witam Ciebie na moim blogu! Bardzo mi miło Ciebie gościć na moim
-              blogu. Nazywam się Maciek i od 2018 roku spełniam się zawodowo
-              jako Frontend Developer. Uwielbiam pisać w Javascript, a moim
-              ulubionym frameworkiem do budowania UI jest React.js.
-            </p>
-            <br />
-            <p className="text-2xl font-light xs:text-lg">
-              W 2020 skończyłem z etatem i założyłem swoją działalność by móc
-              rozwiązywać problemy moich klientów.
+              Nazywam się Maciek. Od 2018 roku spełniam się zawodowo jako
+              Frontend Developer. Lubię pisać w Javascript, a moim ulubionym
+              frameworkiem do budowania UI jest React.js.
             </p>
             <br />
             <p className="text-2xl font-light xs:text-lg">
@@ -32,12 +27,13 @@ export default function AboutMe() {
             </p>
             <br />
             <p className="text-2xl font-light xs:text-lg">
-              Obiecuję Ci, że na moim blogu znajdziesz dużo wartościowych
+              Obiecuję, że na moim blogu znajdziesz dużo wartościowych
               informacji, które będziesz mógł sprawnie wykorzystać w praktyce.
             </p>
             <br />
             <p className="text-2xl font-light xs:text-lg">
-              Jeżeli chciałbyś się zemną skontaktować, napisz do mnie na adres{" "}
+              Jeżeli chciałbyś się zemną skontaktować, lub interesuje Ciebie
+              współpraca to napisz do mnie na adres{" "}
               <span
                 className="font-semibold cursor-pointer"
                 onClick={(e) => {

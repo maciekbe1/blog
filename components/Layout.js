@@ -10,7 +10,7 @@ export default function Layout({ children, className }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="keyworld"
-          content="react, nextjs, javascript, nodejs, node, js, es6, programowanie, frontend, fullstack"
+          content="react, nextjs, javascript, nodejs, node, js, es6, programowanie, frontend, fullstack, typescript, blog"
         />
         <meta
           property="og:site_name"
@@ -20,7 +20,7 @@ export default function Layout({ children, className }) {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pl_PL" />
       </Head>
-      <div className="overflow-hidden font-custom dark:bg-dark-900">
+      <div className="overflow-hidden text-gray-900 light: font-custom dark:bg-dark-900 dark:text-white">
         <Navbar />
         <div className={className}>{children}</div>
         <Footer />

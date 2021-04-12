@@ -15,7 +15,7 @@ export default function Home({ posts, preview }) {
   return (
     <div className="container px-8 mx-auto">
       <Head>
-        <title>Miejsce informacji o Frontendzie</title>
+        <title>Frontreview</title>
         <meta description="Blog powstał w celu dzielenia się wiedzą ze świata programowania Frontend." />
         <meta
           property="og:title"
