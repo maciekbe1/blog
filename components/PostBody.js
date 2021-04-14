@@ -4,6 +4,16 @@ import { urlFor } from "lib/api";
 import Link from "next/link";
 
 const serializers = {
+  listItem: (props) => {
+    if (props.node.level > 1) {
+      return (
+        <li className="ml-6" style={{ listStyleType: "circle" }}>
+          {props.children}
+        </li>
+      );
+    }
+    return <li className="ml-6 list-disc">{props.children}</li>;
+  },
   types: {
     block: (props) => {
       const tag = props.node.style || "normal";
@@ -51,12 +61,15 @@ const serializers = {
     },
   },
   marks: {
+    color: ({ mark, children }) => {
+      return <span style={{ color: mark.hex }}>{children}</span>;
+    },
     internalLink: ({ mark, children }) => {
       const { slug = {} } = mark;
       const href = `/posts/${slug.current}`;
       return (
         <Link href={href}>
-          <a>{children}</a>
+          <a className="text-blue-500">{children}</a>
         </Link>
       );
     },

@@ -4,6 +4,9 @@ import Head from "next/head";
 export default function AboutMe() {
   return (
     <div>
+      <Head>
+        <title>O mnie</title>
+      </Head>
       <AboutMeBanner />
       <div className="container mx-auto -mt-20">
         <div className="flex flex-wrap-reverse">
