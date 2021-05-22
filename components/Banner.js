@@ -4,10 +4,7 @@ export default function HomepageHeader() {
   return (
     <div>
       <div className="hidden mt-4 font-semibold text-center uppercase xs:block font-helvetica">
-        <p className="text-xl">Witaj na Frontreview!</p>
-        <p className="text-2xl">Miejsce</p>
-        <p className="text-3xl">informacji</p>
-        <p className="text-2xl">o Frontendzie</p>
+        <h1 className="mb-2 text-2xl line">Witaj na Frontreview!</h1>
       </div>
       <div className="flex wrapper xs:hidden">
         <div className="z-10 w-4/12 bg-blue-500 rounded-full -top-10 -left-60 h-4/6 base"></div>

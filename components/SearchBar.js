@@ -26,7 +26,7 @@ export default function SearchBar() {
   return (
     <div className="relative text-gray-600">
       <input
-        className="h-10 pl-4 pr-10 text-sm bg-white border-2 border-gray-300 rounded lg:w-80 xl:w-96 focus:outline-none"
+        className="h-10 pl-4 pr-10 text-sm bg-white border-2 border-gray-300 rounded md:w-80 xl:w-96 focus:outline-none"
         type="text"
         name="search"
         placeholder="Search"
@@ -53,12 +53,12 @@ export default function SearchBar() {
       </div>
 
       {focus && posts.length && value ? (
-        <div className="absolute overflow-y-auto bg-white border-2 border-gray-300 top-10 max-h-60 lg:w-80 xl:w-96 ">
+        <div className="absolute w-full overflow-y-auto bg-white border-2 border-gray-300 top-10 max-h-60">
           {posts.map((item, index) => {
             return (
               <div
                 key={item._id}
-                className="flex p-2 truncate border-b-2 border-indigo-600 cursor-pointer hover:bg-gray-400 hover:text-white"
+                className="flex p-2 border-b-2 border-indigo-600 cursor-pointer hover:bg-gray-400 hover:text-white"
                 onMouseDown={() => {
                   router.push(`/posts/${item.slug}`);
                   setValue(item.title);
@@ -67,7 +67,8 @@ export default function SearchBar() {
                   setFocus(false);
                 }}
               >
-                <Image
+                <img
+                  className="object-cover w-10 h-10 xs:hidden"
                   src={
                     urlFor(item.mainImage.image)
                       .height(40)
@@ -76,12 +77,9 @@ export default function SearchBar() {
                       .width(40)
                       .url() || ""
                   }
-                  width={40}
-                  height={40}
-                  className="object-cover"
                 />
-                <div className="mx-2">
-                  <div>{item.title}</div>
+                <div className="w-full mx-2">
+                  <div className="truncate">{item.title}</div>
                   <div className="text-sm">{dateUtil(item.publishedAt)}</div>
                 </div>
               </div>
