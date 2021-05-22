@@ -12,8 +12,9 @@ export default function HomepageHeader() {
       <div className="container flex justify-center w-full mx-auto">
         <div className="z-10 flex flex-col justify-center w-full font-semibold text-white uppercase lg:w-1/2 font-helvetica">
           <p className="text-2xl">Witaj na Frontreview!</p>
-          <h1 className="-mx-2 lg:text-9xl text-7xl">Miejsce informacji</h1>
-          <p className="text-5xl">Na temat Javascript</p>
+          <p className="lg:text-9xl text-7xl">Miejsce</p>
+          <p className="text-8xl">informacji</p>
+          <p className="text-5xl">o Frontendzie</p>
         </div>
 
         <div className="relative z-10 justify-center hidden w-1/2 lg:flex">

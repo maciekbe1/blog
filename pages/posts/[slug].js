@@ -33,7 +33,7 @@ export default function PostDetail({ post, preview }) {
           key="ogurl"
         />
       </Head>
-      <div className="container mx-auto lg:px-48">
+      <div className="container px-8 mx-auto">
         {preview && <PreviewAlert />}
         <PostHeader
           date={post.publishedAt}
