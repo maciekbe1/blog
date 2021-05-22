@@ -68,7 +68,7 @@ export function PostForm({ _id }) {
         <div className="flex items-center justify-end">
           <input
             type="submit"
-            className="px-6 py-2 text-white bg-indigo-600 rounded"
+            className="px-6 py-2 text-white bg-indigo-500 rounded cursor-pointer hover:bg-indigo-700"
           />
           {state && (
             <p className="pl-4 text-green-600">

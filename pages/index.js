@@ -46,10 +46,10 @@ export default function Home({ posts, preview }) {
         <button
           onClick={() => setSize(size + 1)}
           disabled={hitEnd}
-          className={`px-4 pb-1 text-lg rounded ${
+          className={`font-bold py-2 px-4 rounded ${
             hitEnd
-              ? "text-gray-200 bg-gray-500 border-4 border-gray-500"
-              : "text-white box-border bg-indigo-600 border-4 border-indigo-600 hover:text-gray-600 hover:bg-white text-lg"
+              ? "text-gray-200 bg-gray-500"
+              : "bg-indigo-500 hover:bg-indigo-700 text-white focus:outline-none"
           }`}
         >
           Load More

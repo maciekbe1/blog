@@ -19,6 +19,9 @@ module.exports = {
         satisfy: "Satisfy",
         helvetica: "Helvetica",
       },
+      height: {
+        inherit: "inherit",
+      },
     },
   },
   variants: {

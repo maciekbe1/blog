@@ -8,19 +8,19 @@ export default function AboutMe() {
         <title>O mnie</title>
       </Head>
       <AboutMeBanner />
-      <div className="container mx-auto -mt-20">
+      <div className="container mx-auto -mt-20 xs:mt-4">
         <div className="flex flex-wrap-reverse">
-          <div className="w-1/2 px-8 xs:w-full">
+          <div className="px-8 md:w-1/2 xs:w-full sm:w-full">
             <img src="/assets/desk.webp" alt="" />
           </div>
-          <div className="w-1/2 px-8 xs:w-full">
+          <div className="px-8 md:w-1/2 xs:w-full sm:w-full">
             <h2 className="mb-10 text-6xl font-semibold uppercase xs:text-2xl font-helvetica line">
               O mnie
             </h2>
             <p className="text-2xl font-light xs:text-lg">
-              Nazywam się Maciek. Od 2018 roku spełniam się zawodowo jako
-              Frontend Developer. Lubię pisać w Javascript, a moim ulubionym
-              frameworkiem do budowania UI jest React.js.
+              Od 2018 roku spełniam się zawodowo jako Frontend Developer. Lubię
+              pisać w Javascript, a moim ulubionym frameworkiem do budowania UI
+              jest React.js.
             </p>
             <br />
             <p className="text-2xl font-light xs:text-lg">

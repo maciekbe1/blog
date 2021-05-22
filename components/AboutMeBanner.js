@@ -1,27 +1,19 @@
 export default function AboutMeBanner() {
   return (
-    <div
-      style={{
-        clipPath: "polygon(0% 0%, 100% 0, 100% 64%, 66% 78%, 0 64%)",
-        height: "900px",
-      }}
-    >
-      <div
-        className="absolute w-full about-me__gradient"
-        style={{ filter: "blur(60px)", height: "700px" }}
-      ></div>
-      <div className="container px-8 mx-auto">
-        <div className="flex items-center">
+    <div className="about-me__wrapper xs:hidden sm:hidden md:block">
+      <div className="absolute w-full about-me__gradient"></div>
+      <div className="container px-8 mx-auto about-me__container">
+        <div className="flex items-center h-inherit">
           <div className="relative w-1/2">
-            <h1 className="-mx-3 text-white font-helvetica about-me__title">
+            <h1 className="text-white font-helvetica about-me__title">
               <span className="font-light ">Maciej </span>
               <span className="font-bold">Bednarczyk</span>
             </h1>
-            <h3 className="mt-4 text-6xl font-helvetica line">
+            <h3 className="mt-4 lg:text-6xl md:text-3xl font-helvetica line">
               Frontend Developer
             </h3>
           </div>
-          <div className="relative w-1/2" style={{ height: "650px" }}>
+          <div className="relative self-start w-1/2 about-image__wrapper">
             <img
               src="/assets/light.webp"
               alt=""
