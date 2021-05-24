@@ -40,10 +40,6 @@ export default function PostDetail({ post, preview }) {
           image={post.mainImage.image}
           title={post.title}
           subtitle={post.subtitle}
-          authorAvatar={post.author.image}
-          authorName={post.author.name}
-          categories={post.categories}
-          slug={post.slug}
         />
         <PostBody body={post.body} />
 
