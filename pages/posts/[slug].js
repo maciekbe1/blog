@@ -56,7 +56,7 @@ export default function PostDetail({ post, preview }) {
 }
 export async function getStaticProps({ params, preview = false, previewData }) {
   const post = await getPostBySlug(params.slug, preview);
-  return { props: { post, preview } };
+  return { props: { post, preview }, revalidate: 1 };
 }
 
 export async function getStaticPaths() {

@@ -9,7 +9,7 @@ export default async function enablePreview(req, res) {
   }
 
   const post = await getPostBySlug(req.query.slug, true);
-  console.log(post);
+
   if (!post) {
     return res.status(401).json({});
   }
