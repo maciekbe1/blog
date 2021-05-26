@@ -15,7 +15,6 @@ export default function PostComments({ comments }) {
 }
 
 function Comment({ comment }) {
-  console.log(comment);
   return (
     <li className="flex py-2 pb-1 border-b-2 odd:bg-white dark:odd:bg-gray-700">
       <div className="flex items-center justify-center mr-4">
