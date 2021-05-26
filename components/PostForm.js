@@ -10,18 +10,19 @@ export function PostForm({ _id }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
+    setIsDisabled(true);
     fetch("/api/createComment", {
       method: "POST",
       body: JSON.stringify({ ...data, _id }),
     }).then(() => {
-      setState(true);
       setTimeout(() => {
-        setState(false);
+        setIsDisabled(false);
         reset();
       }, 10000);
     });
   };
-  const [state, setState] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+
   //console.log(watch("example")); // watch input value by passing the name of it
 
   return (
@@ -66,15 +67,16 @@ export function PostForm({ _id }) {
           </div>
         </div>
         <div className="flex items-center justify-end">
-          <input
-            type="submit"
-            className="px-6 py-2 text-white bg-indigo-500 rounded cursor-pointer hover:bg-indigo-700"
-          />
-          {state && (
+          {isDisabled && (
             <p className="pl-4 text-green-600">
               Dziękuję za komentarz. Po weryfikacji pojawi się w sekcji{" "}
             </p>
           )}
+          <input
+            type="submit"
+            className="px-6 py-2 text-white bg-indigo-500 rounded cursor-pointer hover:bg-indigo-700 disabled:opacity-50"
+            disabled={isDisabled}
+          />
         </div>
       </form>
     </div>
