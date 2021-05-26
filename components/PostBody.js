@@ -34,7 +34,9 @@ const serializers = {
       if (props.children == "") {
         return <br />;
       }
-      return <p className="my-4 text-lg xs:text-base">{props.children}</p>;
+      return (
+        <p className="my-4 text-lg xs:text-base block-text">{props.children}</p>
+      );
     },
     code: ({ node: { language, code, filename } }) => (
       <div className="my-2 xs:px-0">

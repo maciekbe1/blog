@@ -139,3 +139,7 @@
     height: 650px;
   }
 }
+
+.block-text code {
+  @apply p-1 text-sm text-blue-600 bg-gray-200 rounded-sm;
+}
