@@ -2,7 +2,7 @@ import { getPostBySlug, getAllPosts } from "lib/api";
 import PostHeader from "@/components/PostHeader";
 import PostBody from "@/components/PostBody";
 import { PostForm } from "@/components/PostForm";
-import PostComments from "@/components/PostComments";
+import DisqusComment from "@/components/DisqusComment";
 import PreviewAlert from "@/components/PreviewAlert";
 import Head from "next/head";
 
@@ -48,13 +48,7 @@ export default function PostDetail({ post, preview }) {
         />
         <PostBody body={post.body} />
 
-        <div className="my-6">
-          {post?.comments && <p>Liczba komentarzy: {post.comments.length}</p>}
-          <hr />
-        </div>
-
-        <PostForm _id={post._id} />
-        <PostComments comments={post?.comments} />
+        <DisqusComment id={post._id} slug={post.slug} title={post.title} />
       </div>
     </>
   );
