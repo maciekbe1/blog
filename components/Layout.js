@@ -8,6 +8,7 @@ export default function Layout({ children, className }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="robots" content="noodp" />
         <meta
           name="keyworld"
           content="react, nextjs, javascript, nodejs, node, js, es6, programowanie, frontend, fullstack, typescript, blog"

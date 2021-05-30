@@ -25,7 +25,7 @@ export default function PostCard({ post }) {
             <div className="flex flex-col justify-between h-full px-6 py-4">
               <div className="text-xs text-gray-200">
                 <p className="mb-2 subpixel-antialiased">
-                  {dateUtil(new Date(post.publishedAt))}
+                  {dateUtil(post.publishedAt)}
                 </p>
                 <p className="text-2xl font-bold">{post.title}</p>
               </div>

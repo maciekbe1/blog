@@ -77,7 +77,7 @@ export default function Navbar() {
               <SearchBar />
 
               <div className="absolute right-0 flex items-center xs:right-4">
-                <div className="mr-6 xs:hidden">
+                <div className="mr-6 text-xl xs:hidden">
                   <Link href="/o-mnie">O mnie</Link>
                 </div>
 
