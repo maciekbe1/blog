@@ -6,7 +6,7 @@ import { urlFor } from "lib/api";
 export default function PostCard({ post }) {
   return (
     <Link href={`/posts/${post.slug}`}>
-      <div className="relative overflow-hidden transition duration-300 ease-in-out delay-150 transform bg-white rounded cursor-pointer hover:scale-110">
+      <div className="relative overflow-hidden transition duration-300 ease-in-out transform bg-white rounded cursor-pointer delay-50 hover:scale-110">
         <div
           style={{
             backgroundImage: `url('${urlFor(post.mainImage.image)

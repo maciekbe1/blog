@@ -58,7 +58,7 @@ export default function SearchBar() {
             return (
               <div
                 key={item._id}
-                className="flex p-2 border-b-2 border-indigo-600 cursor-pointer hover:bg-gray-400 hover:text-white"
+                className="flex p-2 border-b-2 border-indigo-700 cursor-pointer hover:bg-gray-400 hover:text-white"
                 onMouseDown={() => {
                   router.push(`/posts/${item.slug}`);
                   setValue(item.title);

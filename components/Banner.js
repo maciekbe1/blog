@@ -7,11 +7,10 @@ export default function HomepageHeader() {
         <h1 className="mb-2 text-2xl line">Witaj na Frontreview!</h1>
       </div>
       <div className="flex wrapper xs:hidden">
-        <div className="z-10 w-4/12 bg-blue-500 rounded-full -top-10 -left-60 h-4/6 base"></div>
-        <div className="z-10 w-4/12 bg-blue-500 rounded-full -top-20 -right-40 h-4/6 base"></div>
+        <div className="w-4/12 bg-blue-500 rounded-full -top-20 -right-40 h-4/6 base"></div>
         <div className="w-full h-full bg-indigo-600 rounded -top-10 -left-40 base"></div>
         <div className="w-8/12 h-full bg-pink-400 rounded-full base -bottom-20 -right-40"></div>
-        <div className="w-8/12 bg-yellow-400 rounded-full h-3/6 base -bottom-20 -left-60"></div>
+        <div className="w-8/12 bg-yellow-400 rounded-full h-3/6 base -bottom-20 -left-40"></div>
 
         <div className="container flex justify-center w-full mx-auto">
           <div className="z-10 flex flex-col justify-center w-full font-semibold text-white uppercase lg:w-1/2 font-helvetica">

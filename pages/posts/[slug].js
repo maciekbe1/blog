@@ -14,7 +14,12 @@ export default function PostDetail({ post, preview }) {
         <meta description={post.subtitle} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="keyworld" content={post.categories.slice(", ")} />
+        <meta
+          name="keyworld"
+          content={post.categories
+            .slice(", ")
+            .map((item) => item.toLowerCase())}
+        />
         <meta
           property="og:title"
           content={post.title}
@@ -33,7 +38,7 @@ export default function PostDetail({ post, preview }) {
           key="ogurl"
         />
       </Head>
-      <div className="container px-8 mx-auto">
+      <div className="container mx-auto xs:px-8">
         {preview && <PreviewAlert />}
         <PostHeader
           date={post.publishedAt}

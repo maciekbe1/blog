@@ -15,17 +15,17 @@ export default function Home({ posts, preview }) {
   return (
     <div className="container px-8 mx-auto">
       <Head>
-        <title>Frontreview</title>
-        <meta description="Blog powstał w celu dzielenia się wiedzą ze świata programowania Frontend." />
+        <title>Frontreview - wiedza o front-end</title>
+        <meta description="Blog o programowaniu front-end" />
         <meta
           property="og:title"
-          content="Frontreview - miejsce informacji o Frontendzie"
+          content="Frontreview - miejsce informacji o programowaniu front-end"
           key="title"
           key="ogtitle"
         />
         <meta
           property="og:description"
-          content="Blog powstał w celu dzielenia się wiedzą ze świata programowania Frontend."
+          content="Blog o programowaniu front-end"
           key="ogdesc"
         />
         <meta
@@ -49,7 +49,7 @@ export default function Home({ posts, preview }) {
           className={`font-bold py-2 px-4 rounded ${
             hitEnd
               ? "text-gray-200 bg-gray-500"
-              : "bg-indigo-500 hover:bg-indigo-700 text-white focus:outline-none"
+              : "bg-indigo-700 hover:bg-indigo-600 text-white focus:outline-none"
           }`}
         >
           Load More

@@ -68,8 +68,8 @@ export default function Navbar() {
               <div className="absolute left-0 hidden w-auto sm:block">
                 <Link href="/">
                   <div className="flex items-center font-bold cursor-pointer">
-                    <div className="">
-                      Front<span className="text-indigo-600">review</span>
+                    <div className="text-xl">
+                      Front<span className="text-indigo-700">review</span>
                     </div>
                   </div>
                 </Link>
