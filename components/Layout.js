@@ -25,7 +25,7 @@ export default function Layout({ children, className }) {
           content="Kf4IUf_oTBSgATrEnejZ-PGm6sjFe1Hy4KJn4glevcE"
         />
       </Head>
-      <div className="overflow-hidden text-gray-900 light: font-custom dark:bg-dark-900 dark:text-white">
+      <div className="overflow-hidden text-gray-900 light:font-custom dark:bg-dark-900 dark:text-white">
         <Navbar />
         <div className={className}>{children}</div>
         <Footer />
