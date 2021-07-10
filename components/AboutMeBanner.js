@@ -4,12 +4,12 @@ export default function AboutMeBanner() {
       <div className="absolute w-full about-me__gradient"></div>
       <div className="container px-8 mx-auto about-me__container">
         <div className="flex items-center h-inherit">
-          <div className="relative w-1/2">
+          <div className="relative w-1/2 md:-top-16 lg:top-0">
             <h1 className="text-white font-helvetica about-me__title">
               <span className="font-light ">Maciej </span>
               <span className="font-bold">Bednarczyk</span>
             </h1>
-            <h3 className="mt-4 lg:text-6xl md:text-3xl font-helvetica line">
+            <h3 className="mt-4 lg:text-5xl md:text-3xl font-helvetica line">
               Frontend Developer
             </h3>
           </div>
