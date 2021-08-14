@@ -1,7 +1,7 @@
 import { createRef, useEffect } from "react";
 import highlight from "highlight.js";
 import { findDOMNode } from "react-dom";
-import "highlight.js/styles/ocean.css";
+import "highlight.js/styles/atom-one-dark.css";
 
 export default function CodeHighlight({ language, children }) {
   const code = createRef();

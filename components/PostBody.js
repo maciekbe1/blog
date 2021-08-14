@@ -15,6 +15,25 @@ const serializers = {
     return <li className="ml-6 list-disc">{props.children}</li>;
   },
   types: {
+    codeSandbox: (props) => {
+      const { node } = props;
+      return (
+        <div>
+          <iframe
+            src={node.url}
+            style={{
+              width: "100%",
+              height: "500px",
+              border: "0",
+              borderRadius: "4px",
+              overflow: "hidden",
+            }}
+            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          ></iframe>
+        </div>
+      );
+    },
     block: (props) => {
       const tag = props.node.style || "normal";
       if (tag == "h2") {
